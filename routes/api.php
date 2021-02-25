@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('todos', 'API\TodoController');
+
+Route::get('/completed', 'API\TodoController@completedTasks');
